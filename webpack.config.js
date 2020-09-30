@@ -47,7 +47,7 @@ module.exports = (env, options) => {
         },
         {
           test: /\.svg$/,
-          loader: "svg-inline-loader",
+          use: ["@svgr/webpack"],
         },
         {
           test: /\.(s*)css$/,
@@ -68,6 +68,7 @@ module.exports = (env, options) => {
     },
     devServer: {
       contentBase: path.join(__dirname, "docs"),
+      historyApiFallback: true,
     },
   };
 };

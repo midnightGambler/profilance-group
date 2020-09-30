@@ -1,0 +1,12 @@
+.auth-btn {
+  background-color: $primary;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 1rem;
+  cursor: pointer;
+
+  &--full-heigth {
+    align-self: stretch;
+  }
+}
