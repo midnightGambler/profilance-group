@@ -1,0 +1,25 @@
+.button {
+  border: none;
+  padding: $btn-padding;
+  display: block;
+  width: 100%;
+  border-radius: $btn-border;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s background-color ease;
+
+  &--primary {
+    background-color: $primary;
+    color: #fff;
+    &:hover {
+      background-color: $primary-dark;
+    }
+  }
+  &--error {
+    background-color: $error;
+    color: #fff;
+    &:hover {
+      background-color: $error-dark;
+    }
+  }
+}

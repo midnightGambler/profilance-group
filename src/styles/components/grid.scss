@@ -1,0 +1,36 @@
+.grid {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -0.5rem;
+  &:after {
+    content: "";
+    flex: 1;
+  }
+  &__item {
+    max-width: 100%;
+    flex: 0 0 100%;
+    padding: 0.5rem;
+  }
+
+  @media (min-width: $mobile) {
+    &:after {
+      flex: 0 0 50%;
+    }
+    &__item {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    &:after {
+      flex: 0 0 33.3%;
+    }
+    &__item {
+      flex: 0 0 33.3%;
+      max-width: 33.3%;
+    }
+  }
+}

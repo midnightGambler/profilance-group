@@ -1,5 +1,7 @@
 import React from "react";
+import { NewsCard } from "../../components/NewsCard/NewsCard";
 import { Container } from "../../components/UI/Container";
+import { Grid, GridItem } from "../../components/UI/Grid";
 
 const news = [
   {
@@ -12,7 +14,7 @@ const news = [
   {
     title: "Котика перепутали с хлебушком!",
     text: "И засунули в пакетик! По последним данным, он не очень этому рад.",
-    approved: true,
+    approved: false,
     createdAt: 1600646400000,
   },
   {
@@ -25,13 +27,13 @@ const news = [
   {
     title: "Собачка залезла в коробку и сидит",
     text: "Зачем она это делает? Что это значит? Она что, кот?",
-    approved: true,
+    approved: false,
     createdAt: 1600819200000,
   },
   {
     title: "Местные крыски такие маленькие, такие утютю",
     text: "Нюх-нюх-нюх-нюх-нюх-нюх-нюх-нюх-нюх-нюх-нюх-нюх-нюх-нюх-нюх-нюх-нюх",
-    approved: true,
+    approved: false,
     createdAt: 1600905600000,
   },
   {
@@ -40,33 +42,22 @@ const news = [
     approved: true,
     createdAt: 1600992000000,
   },
+  {
+    title: "Собачка залезла в коробку и сидит",
+    text: "Зачем она это делает? Что это значит? Она что, кот?",
+    approved: false,
+    createdAt: 1600819200000,
+  },
 ];
-
-const NewsCard = ({ title, text, createdAt }) => {
-  return (
-    <div className="news-layout__item">
-      <div className="card">
-        <div className="card__header">
-          <h3 title={title} className="card__header-title">
-            {title}
-          </h3>
-        </div>
-        <div className="card__body">
-          <p>{text}</p>
-          <span>{createdAt}</span>
-        </div>
-      </div>
-    </div>
-  );
-};
 
 export const NewsPage = () => (
   <Container>
-    <h1>news page</h1>
-    <div className="news-layout">
+    <Grid>
       {news.map((article) => (
-        <NewsCard key={article.createdAt} {...article} />
+        <GridItem key={article.createdAt}>
+          <NewsCard {...article} />
+        </GridItem>
       ))}
-    </div>
+    </Grid>
   </Container>
 );

@@ -1,9 +1,19 @@
 // colors
 $bodyBG: #fafafe;
 $primary: #f9a109;
+$primary-dark: #e09006;
+$error: #eb5757;
+$error-dark: #e62828;
 $text: #000;
 $cardBG: #fff;
+$text-off: #b4b4b4;
+
+// component props
 $card-shadow: 0px 2px 12px rgba(0, 0, 0, 0.05);
+$card-radius: 8px;
+$btn-border: 4px;
+$btn-padding: 0.5rem 1rem;
 
 // breakpoints
 $mobile: 425px;
+$tablet: 768px;
