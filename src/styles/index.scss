@@ -1,13 +1,7 @@
 @import "./constants";
+@import "base";
 @import "./components/header";
 @import "./components/container";
 @import "./components/logo";
 @import "./components/navigation";
 @import "./components/auth-btn";
-
-body {
-  font-family: "Quicksand", sans-serif;
-  background-color: #fafafe;
-  padding: 0;
-  margin: 0;
-}
