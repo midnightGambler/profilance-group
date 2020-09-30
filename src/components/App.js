@@ -1,9 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Header } from "./Header/Header";
-
-const MainPage = () => <h1>main page</h1>;
-const NewsPage = () => <h1>news page</h1>;
+import { MainPage } from "../pages/MainPage/MainPage";
+import { NewsPage } from "../pages/MainPage/NewsPage";
 
 export const App = () => (
   <Router>

@@ -1,7 +1,11 @@
 @import "./constants";
-@import "base";
+@import "./base";
+
+@import "./pages/news";
+
 @import "./components/header";
 @import "./components/container";
 @import "./components/logo";
 @import "./components/navigation";
 @import "./components/auth-btn";
+@import "./components/card";
