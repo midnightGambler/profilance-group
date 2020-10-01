@@ -1,4 +1,9 @@
-import { ADD_NEWS, APPROVE_NEWS, FILTER_NEWS } from "../actions/types";
+import {
+  ADD_NEWS,
+  APPROVE_NEWS,
+  FILTER_NEWS,
+  REMOVE_NEWS,
+} from "../actions/types";
 import { news } from "../config";
 
 const defaultState = {
@@ -40,6 +45,13 @@ export const newsReducer = (state = defaultState, action) => {
       };
 
       return { list: [newArticle, ...state.list] };
+    }
+
+    case REMOVE_NEWS: {
+      const { id } = action;
+      const newList = state.list.filter((article) => article.id !== id);
+
+      return { list: newList };
     }
 
     default:

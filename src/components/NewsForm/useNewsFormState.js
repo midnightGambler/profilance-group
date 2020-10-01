@@ -20,7 +20,7 @@ export const useNewsFormState = () => {
   const [error, setError] = useState("");
   const dispatch = useDispatch();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (callback, e) => {
     e.preventDefault();
 
     const error = validate(formData);
@@ -28,6 +28,7 @@ export const useNewsFormState = () => {
     if (error) return setError(error);
 
     dispatch(addNews(formData));
+    callback();
   };
 
   const handleChange = ({ target }) => {

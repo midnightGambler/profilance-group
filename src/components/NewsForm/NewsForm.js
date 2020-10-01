@@ -11,11 +11,11 @@ import {
 } from "../UI/Form";
 import { useNewsFormState } from "./useNewsFormState";
 
-export const NewsForm = () => {
+export const NewsForm = ({ handleCloseModal }) => {
   const [formData, onChange, onSubmit, error] = useNewsFormState();
 
   return (
-    <Form onSubmit={onSubmit}>
+    <Form onSubmit={onSubmit.bind(null, handleCloseModal)}>
       <FormTitle>Добавить новость</FormTitle>
       {error && <FormError>{error}</FormError>}
       <FormGroup>

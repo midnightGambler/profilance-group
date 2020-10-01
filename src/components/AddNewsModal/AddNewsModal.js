@@ -7,7 +7,7 @@ export const AddNewsModal = ({ isOpen, onClose }) => {
   return (
     <Modal isOpen={isOpen} onRequestClose={onClose}>
       <CloseModalBtn onClose={onClose} />
-      <NewsForm />
+      <NewsForm handleCloseModal={onClose} />
     </Modal>
   );
 };

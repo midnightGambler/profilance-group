@@ -1,4 +1,4 @@
-import { ADD_NEWS, APPROVE_NEWS, FILTER_NEWS } from "./types";
+import { ADD_NEWS, APPROVE_NEWS, FILTER_NEWS, REMOVE_NEWS } from "./types";
 
 export const filterNews = (filter) => ({
   type: FILTER_NEWS,
@@ -13,4 +13,9 @@ export const approveNews = (id) => ({
 export const addNews = (payload) => ({
   type: ADD_NEWS,
   payload,
+});
+
+export const deleteNews = (id) => ({
+  type: REMOVE_NEWS,
+  id,
 });

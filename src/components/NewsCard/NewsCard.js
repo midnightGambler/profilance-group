@@ -1,6 +1,5 @@
 import React, { useMemo } from "react";
 import format from "date-fns/format";
-import { useSelector } from "react-redux";
 import CheckIcon from "../../icons/check.svg";
 import { Button } from "../UI/Button";
 
@@ -10,10 +9,10 @@ export const NewsCard = ({
   text,
   createdAt,
   approved,
+  isAdmin,
   handleApproveNews,
+  handleDeleteNews,
 }) => {
-  const isAdmin = useSelector(({ auth }) => auth.usertype === "admin");
-
   const formattedDate = useMemo(() => format(createdAt, "dd.MM.yyyy"), [
     createdAt,
   ]);
@@ -51,7 +50,12 @@ export const NewsCard = ({
           >
             Одобрить
           </Button>
-          <Button block className="news-card__actions--btn" variant="error">
+          <Button
+            onClick={handleDeleteNews.bind(null, id)}
+            block
+            className="news-card__actions--btn"
+            variant="error"
+          >
             Удалить
           </Button>
         </div>
