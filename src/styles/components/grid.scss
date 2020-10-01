@@ -3,7 +3,9 @@
   align-items: stretch;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0 -0.5rem;
+  &--no-gap {
+    margin: 0 -0.5rem;
+  }
   &__item {
     max-width: 100%;
     flex: 0 0 100%;

@@ -10,3 +10,16 @@ export const navigation = [
     path: "/news",
   },
 ];
+
+export const users = [
+  {
+    login: "admin",
+    password: "admin",
+    isAdmin: true,
+  },
+  {
+    login: "user",
+    password: "user",
+    isAdmin: false,
+  },
+];

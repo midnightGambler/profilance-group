@@ -9,10 +9,11 @@
   }
   &__input {
     display: block;
-    border: 2px solid #f2f2f2;
+    border: $input-border;
     padding: 0.5rem 1rem;
     border-radius: 4px;
     transition: 0.3s border-color ease;
+    width: 100%;
     &:focus {
       border-color: $primary;
       outline: none;
@@ -26,5 +27,14 @@
 
   &__btn {
     margin-top: 1rem;
+  }
+
+  &__error {
+    font-size: 12px;
+    text-align: center;
+    display: block;
+    color: $error;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
   }
 }
