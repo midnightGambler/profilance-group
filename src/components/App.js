@@ -11,7 +11,7 @@ export const App = () => (
     <Router>
       <Header />
       <Switch>
-        <Route path="/" exact component={MainPage} />
+        <Route path="/" component={MainPage} />
         <Route path="/news" exact component={NewsPage} />
       </Switch>
     </Router>
