@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { AuthModal } from "../AuthModal/AuthModal";
 
 export const Header = () => {
-  const [isAuthModalOpen, setIsAuthModalOpen] = useState(true);
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
 
   const toggleModal = () => setIsAuthModalOpen(!isAuthModalOpen);
 

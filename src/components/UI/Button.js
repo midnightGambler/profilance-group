@@ -5,6 +5,7 @@ export const Button = ({
   children,
   variant = "primary",
   className,
+  block,
   ...rest
 }) => (
   <button
@@ -12,6 +13,7 @@ export const Button = ({
     className={cn("button", className, {
       ["button--primary"]: variant === "primary",
       ["button--error"]: variant === "error",
+      ["button--block"]: block,
     })}
   >
     {children}

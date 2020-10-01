@@ -32,8 +32,10 @@ export const NewsCard = ({ title, text, createdAt, approved }) => {
       </div>
 
       <div className="news-card__actions">
-        <Button className="news-card__actions--btn">Одобрить</Button>
-        <Button className="news-card__actions--btn" variant="error">
+        <Button block className="news-card__actions--btn">
+          Одобрить
+        </Button>
+        <Button block className="news-card__actions--btn" variant="error">
           Удалить
         </Button>
       </div>

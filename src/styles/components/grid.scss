@@ -3,6 +3,10 @@
   align-items: stretch;
   flex-wrap: wrap;
   justify-content: space-between;
+  &:after {
+    content: "";
+    flex: 1;
+  }
   &--no-gap {
     margin: 0 -0.5rem;
   }

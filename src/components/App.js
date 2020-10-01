@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import { store } from "../store/store";
 import { Header } from "./Header/Header";
 import { MainPage } from "../pages/MainPage/MainPage";
-import { NewsPage } from "../pages/MainPage/NewsPage";
+import { NewsPage } from "../pages/NewsPage/NewsPage";
 
 export const App = () => (
   <Provider store={store}>

@@ -1,0 +1,17 @@
+.news-page {
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &--filter {
+      margin-right: 1rem;
+      flex: 1;
+      min-width: 0;
+
+      @media (min-width: $tablet) {
+        max-width: calc(33.3% - 0.5rem);
+      }
+    }
+  }
+}
