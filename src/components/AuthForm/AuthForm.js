@@ -31,7 +31,7 @@ export const AuthForm = ({ handleCloseModal }) => {
           error="Неверный логин"
         />
       </FormGroup>
-      <Button className="form__btn" variant="primary" type="submit">
+      <Button block className="form__btn" type="submit">
         Авторизоваться
       </Button>
     </Form>

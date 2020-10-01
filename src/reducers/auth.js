@@ -4,7 +4,7 @@ import { SIGN_IN, SIGN_OUT } from "../actions/types";
 const defaultState = {
   isAuthorized: false,
   login: "Гость",
-  isAdmin: false,
+  usertype: "guest",
 };
 
 export const authReducer = (state = defaultState, action) => {
@@ -17,7 +17,7 @@ export const authReducer = (state = defaultState, action) => {
       return {
         isAuthorized: true,
         login: user.login,
-        isAdmin: user.isAdmin,
+        usertype: user.usertype,
       };
     }
 

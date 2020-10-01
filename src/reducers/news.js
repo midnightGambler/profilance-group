@@ -1,4 +1,4 @@
-import { FILTER_NEWS } from "../actions/types";
+import { ADD_NEWS, APPROVE_NEWS, FILTER_NEWS } from "../actions/types";
 import { news } from "../config";
 
 const defaultState = {
@@ -17,6 +17,29 @@ export const newsReducer = (state = defaultState, action) => {
       );
 
       return { list };
+    }
+
+    case APPROVE_NEWS: {
+      const { id } = action;
+
+      const list = state.list.map((article) => {
+        if (article.id === id) return { ...article, approved: true };
+        return article;
+      });
+
+      return { list };
+    }
+
+    case ADD_NEWS: {
+      const { payload } = action;
+      const newArticle = {
+        ...payload,
+        id: state.list.length,
+        approved: false,
+        createdAt: Date.now(),
+      };
+
+      return { list: [newArticle, ...state.list] };
     }
 
     default:

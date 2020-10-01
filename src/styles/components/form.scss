@@ -7,7 +7,8 @@
     font-size: 14px;
     color: $text-off;
   }
-  &__input {
+  &__input,
+  &__textarea {
     display: block;
     border: $input-border;
     padding: 0.5rem 1rem;

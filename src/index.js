@@ -15,7 +15,7 @@ Modal.defaultStyles.content = {
   transform: "translate(-50%, -50%)",
   borderRadius: "8px",
   padding: "2rem",
-  minWidth: 250,
+  minWidth: 300,
 };
 
 Modal.defaultStyles.overlay.backgroundColor = "rgba(0, 0, 0, 46%)";

@@ -13,7 +13,9 @@ export const LogoutForm = () => {
     <div className="logout-form">
       <div className="logout-form__text">Вы вошли как</div>
       <h2 className="logout-form__login">{login}</h2>
-      <Button onClick={handleSignOut}>Выйти</Button>
+      <Button block onClick={handleSignOut}>
+        Выйти
+      </Button>
     </div>
   );
 };

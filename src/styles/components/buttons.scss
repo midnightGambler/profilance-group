@@ -14,7 +14,7 @@
   &--primary {
     background-color: $primary;
     color: #fff;
-    &:hover {
+    &:hover:not(:disabled) {
       background-color: $primary-dark;
     }
   }
@@ -25,5 +25,9 @@
     &:hover {
       background-color: $error-dark;
     }
+  }
+
+  &:disabled {
+    opacity: 0.5;
   }
 }

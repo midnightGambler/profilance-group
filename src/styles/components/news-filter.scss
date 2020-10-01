@@ -1,7 +1,8 @@
 .news-filter {
-  border: $input-border;
+  border: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   outline: none;
   display: block;
+  box-shadow: $card-shadow;
 }

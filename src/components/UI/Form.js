@@ -29,6 +29,10 @@ export const FormInput = ({ className, ...rest }) => (
   <input className={cn("form__input", className)} {...rest} />
 );
 
+export const FormTextarea = ({ className, ...rest }) => (
+  <textarea className={cn("form__textarea", className)} {...rest} />
+);
+
 export const FormError = ({ className, children, ...rest }) => (
   <span {...rest} className={cn(className, "form__error")}>
     {children}
