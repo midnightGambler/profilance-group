@@ -34,5 +34,10 @@
   }
   &__actions {
     padding: 0 1rem 1rem;
+    &--btn {
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+    }
   }
 }

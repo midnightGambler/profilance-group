@@ -5,6 +5,12 @@
   align-items: center;
   padding: 0 1rem;
   cursor: pointer;
+  outline: none;
+  transition: 0.3s background-color ease;
+
+  &:hover {
+    background-color: $primary-dark;
+  }
 
   &--full-heigth {
     align-self: stretch;

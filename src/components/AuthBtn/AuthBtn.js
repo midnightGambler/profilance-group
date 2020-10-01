@@ -7,10 +7,11 @@ export const AuthBtn = ({
   height = "1rem",
   fill = "#fff",
   className,
+  onClick,
   ...rest
 }) => {
   return (
-    <button className={cn("auth-btn", className)}>
+    <button onClick={onClick} className={cn("auth-btn", className)}>
       <LoginIcon fill={fill} width={width} height={height} {...rest} />
     </button>
   );
