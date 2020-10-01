@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{tjUo:function(n,e,t){"use strict";t.r(e);var o=t("q1tI"),r=t.n(o),a=t("i8i4");t.n(a).a.render((function(){return r.a.createElement("h1",null,"Profilance Group")}),document.getElementById("app"))}},[["tjUo",1,2]]]);
